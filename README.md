@@ -7,14 +7,14 @@ Source available at https://github.com/Roms-lab/RuneCrawler/
 
 AntiCheat Implemented ⚠️ (In Progress)
 
-### DISCLAMER
-No you cannot just delete anticheat.ixx and remove the module sence the anticheat holds needed game data to prevent removing.
-
 ### Cheating Consequences
 
 If the AntiCheat detects that you modified the game in unpremitted way Ex. Changing Coins to 100000, the program will close, revert changes, or clear user save data.
 
 Do not cheat. Even though this game is open source cheating will not be tolerated.
+
+### Disclaimer
+No you cannot just delete anticheat.ixx and remove the module sence the anticheat holds needed game data to prevent removing.
 
 ### Modding
 
