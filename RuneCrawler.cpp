@@ -5,9 +5,6 @@
 
 module AntiCheat;
 
-int Coins = 100;
-int PlayerHp = 100;
-
 std::string Player = "O";
 std::string Loot = "L";
 std::string Enemy = "E";
@@ -138,6 +135,7 @@ int main() {
     Inventory();
     Shop();
     Settings();
+    RunAntiCheat();
 
     while (true) {
         CheckKey();
