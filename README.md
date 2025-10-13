@@ -5,7 +5,10 @@ Source available at https://github.com/Roms-lab/RuneCrawler/
 
 ## AntiCheat
 
-AntiCheat Implemented ❌
+AntiCheat Implemented ⚠️ (In Progress)
+
+### DISCLAMER
+No you cannot just delete anticheat.ixx and remove the module sence the anticheat holds needed game data to prevent removing.
 
 ### Cheating Consequences
 
