@@ -13,6 +13,12 @@ If the AntiCheat detects that you modified the game in some way, the program wil
 
 Do not cheat. Even though this game is open source cheating will not be tolerated.
 
+### Modding
+
+I do condone modding.
+
+If you would like to mod the game go ahead, make the game better! This project is open souce and I do allow modding.
+
 ## Supported OS
 
 Windows ✅
