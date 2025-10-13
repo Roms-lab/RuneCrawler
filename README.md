@@ -9,7 +9,7 @@ AntiCheat Implemented ❌
 
 ### Cheating Consequences
 
-If the AntiCheat detects that you modified the game in some way, the program will close, revert changes, or clear user save data.
+If the AntiCheat detects that you modified the game in unpremitted way Ex. Changing Coins to 100000, the program will close, revert changes, or clear user save data.
 
 Do not cheat. Even though this game is open source cheating will not be tolerated.
 
