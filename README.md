@@ -7,6 +7,6 @@ Source available at https://github.com/Roms-lab/RuneCrawler/
 
 Windows ✅
 
-Linux ⚠️ (With changes, but only FunctionWindows to FunctionLinux)
+Linux ⚠️ (With Changes)
 
-MacOS ⚠️ (With changes, but only FunctionWindows to FunctionMac)
+MacOS ⚠️ (With Changes)
