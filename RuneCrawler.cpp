@@ -3,6 +3,11 @@
 #include <conio.h>
 #include <string>
 
+module AntiCheat;
+
+int Coins = 100;
+int PlayerHp = 100;
+
 std::string Player = "O";
 std::string Loot = "L";
 std::string Enemy = "E";
@@ -67,13 +72,13 @@ void Inventory() {
                                               |   |   |  \   /\  ___/|   |  \  | (  <_> )  | \/\___  |
                                               |___|___|  /\_/  \___  >___|  /__|  \____/|__|   / ____|
                                                        \/          \/     \/                   \/     
-                                             +-------------------------------------------------------+
-                                             |                                                       |
-                                             |                                                       |
-                                             |                                                       |
-                                             |                                                       |
-                                             |                                                       |
-                                             +-------------------------------------------------------+
+                                              +------------------------------------------------------+
+                                              |                                                      |
+                                              |                                                      |
+                                              |                                                      |
+                                              |                                                      |
+                                              |                                                      |
+                                              +------------------------------------------------------+
 )";
 }
 
@@ -95,16 +100,31 @@ void Shop() {
 )";
 }
 
+void Settings() {
+    std::cout << R"(
+                                                _________       __    __  .__                      
+                                               /   _____/ _____/  |__/  |_|__| ____    ____  ______
+                                               \_____  \_/ __ \   __\   __\  |/    \  / ___\/  ___/
+                                               /        \  ___/|  |  |  | |  |   |  \/ /_/  >___ \ 
+                                              /_______  /\___  >__|  |__| |__|___|  /\___  /____  >
+                                                      \/     \/                   \//_____/     \/ 
+                                              +----------------------------------------------------+
+                                              | Difficulty: Normal                                 |
+                                              | Volume: 100%                                       |
+                                              +----------------------------------------------------+
+)";
+}
+
 void CheckKey() {
     int key;
     if (_kbhit()) { // Check if a key was pressed
         key = _getch(); // Read the key
         if (key == 224) { // Check for special key indicator
             switch (_getch()) { // Read the actual key code
-            case 72: std::cout << "Up arrow Pressed"; break;
-            case 80: std::cout << "Down arrow Pressed"; break;
-            case 75: std::cout << "Left arrow Pressed"; break;
-            case 77: std::cout << "Right arrow Pressed"; break;
+            case 72: std::cout << "Up arrow Pressed\n"; break;
+            case 80: std::cout << "Down arrow Pressed\n"; break;
+            case 75: std::cout << "Left arrow Pressed\n"; break;
+            case 77: std::cout << "Right arrow Pressed\n"; break;
             }
         }
     }
@@ -117,6 +137,7 @@ int main() {
     DrawMap();
     Inventory();
     Shop();
+    Settings();
 
     while (true) {
         CheckKey();
