@@ -19,6 +19,10 @@ I do condone modding.
 
 If you would like to mod the game go ahead, make the game better! This project is open souce and I do allow modding.
 
+## Contributing
+
+Edit the code and send a push request, or Email me at zachary.sherwood2009@gmail.com to help develop the game.
+
 ## Supported OS
 
 Windows ✅
