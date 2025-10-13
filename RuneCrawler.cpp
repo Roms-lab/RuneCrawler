@@ -1,8 +1,14 @@
 #include <iostream>
 #include <cstdlib>
+#include <conio.h>
 #include <string>
 
 std::string Player = "O";
+std::string Loot = "L";
+std::string Enemy = "E";
+std::string Merchant = "M";
+
+std::string PossibleDoors[4] = { "North", "South", "East", "West"};
 
 void Pause() {
 	std::cout << "Press Enter to continue.";
@@ -42,7 +48,7 @@ void DrawMap() {
                                                       |                                  |
                                                       |                                  |
                                                       |                                  |
-                                                      |                                  |
+                                                      |                 O                |
                                                       |                                  |
                                                       |                                  |
                                                       |                                  |
@@ -69,6 +75,21 @@ void Inventory() {
                                           |                                                       |
                                           +-------------------------------------------------------+
 )";
+}
+
+void checkKey() {
+    int key;
+    if (_kbhit()) { // Check if a key was pressed
+        key = _getch(); // Read the key
+        if (key == 224) { // Check for special key indicator
+            switch (_getch()) { // Read the actual key code
+            case 72: std::cout << "Up arrow Pressed";
+            case 80: std::cout << "Down arrow Pressed";
+            case 75: std::cout << "Left arrow Pressed";
+            case 77: std::cout << "Right arrow Pressed";
+            }
+        }
+    }
 }
 
 int main() {
