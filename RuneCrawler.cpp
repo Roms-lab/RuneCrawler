@@ -5,6 +5,7 @@
 
 
 module AntiCheat;
+import ModAPI;
 import Items;
 
 std::string Player = "O";
