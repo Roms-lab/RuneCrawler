@@ -15,6 +15,8 @@ std::string Merchant = "M";
 
 std::string PossibleDoors[4] = { "North", "South", "East", "West" };
 
+bool Settings_Shown = false;
+
 void Pause() {
     std::cout << "Press Enter to continue.";
     std::cin.get();
@@ -149,7 +151,19 @@ void CheckKey() {
     int key;
     if (_kbhit()) { // Check if a key was pressed
         key = _getch(); // Read the key
-        if (key == 224) { // Check for special key indicator
+        if (key == 27) {
+            std::cout << "Toggle Settings\n";
+            if (Settings_Shown == false) {
+                ClearWindows();
+                Settings();
+                Settings_Shown = true;
+            }
+            else if (Settings_Shown == true) {
+                ClearWindows();
+                Settings_Shown = false;
+            }
+        }
+        else if (key == 224) { // Check for special key indicator
             switch (_getch()) { // Read the actual key code
             case 72: std::cout << "Up arrow Pressed\n"; break;
             case 80: std::cout << "Down arrow Pressed\n"; break;
@@ -166,7 +180,7 @@ int main() {
     Pause();
     ClearWindows();
     RunAntiCheat();
-    Printall();
+    CheckKey();
 
     while (true) {
         CheckKey();
