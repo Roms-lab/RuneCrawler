@@ -22,7 +22,7 @@ I do condone modding.
 
 If you would like to mod the game go ahead, make the game better! This project is open souce and I do allow modding.
 
-To mod the game, simply open and edit ModAPI.ixx, add custom sword, bows, stats, etc.
+To mod the game, simply open and edit ModAPI.ixx, add custom swords, bows, stats, etc.
 
 ## Contributing
 
