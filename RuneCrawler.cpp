@@ -13,28 +13,28 @@ std::string Loot = "L";
 std::string Enemy = "E";
 std::string Merchant = "M";
 
-std::string PossibleDoors[4] = { "North", "South", "East", "West"};
+std::string PossibleDoors[4] = { "North", "South", "East", "West" };
 
 void Pause() {
-	std::cout << "Press Enter to continue.";
-	std::cin.get();
-	std::cout << "\n";
+    std::cout << "Press Enter to continue.";
+    std::cin.get();
+    std::cout << "\n";
 }
 
 void ClearWindows() {
-	system("cls");
+    system("cls");
 }
 
 void ClearLinux() {
-	system("clear");
+    system("clear");
 }
 
 void ClearMac() {
-	system("clear");
+    system("clear");
 }
 
 void PlayTitle() {
-	std::cout << R"(
+    std::cout << R"(
  ______     __  __     __   __     ______     ______     ______     ______     __     __     __         ______     ______    
 /\  == \   /\ \/\ \   /\ "-.\ \   /\  ___\   /\  ___\   /\  == \   /\  __ \   /\ \  _ \ \   /\ \       /\  ___\   /\  == \   
 \ \  __<   \ \ \_\ \  \ \ \-.  \  \ \  __\   \ \ \____  \ \  __<   \ \  __ \  \ \ \/ ".\ \  \ \ \____  \ \  __\   \ \  __<   
@@ -45,7 +45,7 @@ void PlayTitle() {
 }
 
 void DrawMap() {
-	std::cout << R"(
+    std::cout << R"(
                                                       +----------------------------------+
                                                       |                                  |
                                                       |                                  |
@@ -65,7 +65,7 @@ void DrawMap() {
 }
 
 void Inventory() {
-	std::cout << R"(
+    std::cout << R"(
                                               .___                           __                       
                                               |   | _______  __ ____   _____/  |_  ___________ ___.__.
                                               |   |/    \  \/ // __ \ /    \   __\/  _ \_  __ <   |  |
@@ -115,6 +115,36 @@ void Settings() {
 )";
 }
 
+void Mods() {
+    std::cout << R"(
+                                                           _____             .___      
+                                                          /     \   ____   __| _/______
+                                                         /  \ /  \ /  _ \ / __ |/  ___/
+                                                        /    Y    (  <_> ) /_/ |\___ \ 
+                                                        \____|__  /\____/\____ /____  >
+                                                                \/            \/    \/ 
+                                                    +--------------------------------------+
+                                                    | Basic Sword Mod                      |
+                                                    | Basic Bow Mod                        |
+                                                    |                                      |
+                                                    |                                      |
+                                                    |                                      |
+                                                    |                                      |
+                                                    |                                      |
+                                                    |                                      |
+                                                    +--------------------------------------+
+
+)";
+}
+
+void Printall() {
+    DrawMap();
+    Inventory();
+    Shop();
+    Settings();
+    Mods();
+}
+
 void CheckKey() {
     int key;
     if (_kbhit()) { // Check if a key was pressed
@@ -132,18 +162,15 @@ void CheckKey() {
 
 
 int main() {
-	PlayTitle();
-	Pause();
-	ClearWindows();
-    DrawMap();
-    Inventory();
-    Shop();
-    Settings();
+    PlayTitle();
+    Pause();
+    ClearWindows();
     RunAntiCheat();
+    Printall();
 
     while (true) {
         CheckKey();
     }
 
-	return 0;
+    return 0;
 }
