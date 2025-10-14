@@ -13,7 +13,7 @@ export struct SwordName {
 };
 
 export struct BowName {
-  std::string CustomSword;
+  std::string CustomBow;
   int Damage;
   int Rarity;
 };
