@@ -3,7 +3,9 @@
 #include <conio.h>
 #include <string>
 
+
 module AntiCheat;
+module Items;
 
 std::string Player = "O";
 std::string Loot = "L";
@@ -126,6 +128,7 @@ void CheckKey() {
         }
     }
 }
+
 
 int main() {
 	PlayTitle();
