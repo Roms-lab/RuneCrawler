@@ -12,8 +12,16 @@ export struct SwordName {
   int Rarity;
 };
 
+export inline SwordName CustomSwordStats[] = {
+// {"Name", damage, rarity}
+};
+
 export struct BowName {
   std::string CustomBow;
   int Damage;
   int Rarity;
+};
+
+export inline BowName CustomBowStats[] = {
+// {"Name", damage, rarity}
 };
