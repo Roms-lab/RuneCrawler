@@ -4,8 +4,8 @@
 #include <string>
 
 
-module AntiCheat;
-module Items;
+import AntiCheat;
+import Items;
 
 std::string Player = "O";
 std::string Loot = "L";
