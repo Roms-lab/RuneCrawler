@@ -1,5 +1,5 @@
-#include <iostream>
-#include <cstdlib>
+import <iostream>;
+import <cstdlib>;
 
 export module AntiCheat;
 
