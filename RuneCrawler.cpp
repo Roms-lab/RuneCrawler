@@ -4,7 +4,7 @@
 #include <string>
 
 
-import AntiCheat;
+module AntiCheat;
 import Items;
 
 std::string Player = "O";
