@@ -9,13 +9,14 @@ import ModAPI;
 import Items;
 
 std::string Player = "O";
-std::string Loot = "L";
+std::string Chest = "L";
 std::string Enemy = "E";
 std::string Merchant = "M";
 
 std::string PossibleDoors[4] = { "North", "South", "East", "West" };
 
 bool Settings_Shown = false;
+bool Inventory_Shown = false;
 
 void Pause() {
     std::cout << "Press Enter to continue.";
@@ -151,11 +152,12 @@ void CheckKey() {
     int key;
     if (_kbhit()) { // Check if a key was pressed
         key = _getch(); // Read the key
-        if (key == 27) {
+        if (key == 27) { // Esc Key
             std::cout << "Toggle Settings\n";
             if (Settings_Shown == false) {
                 ClearWindows();
                 Settings();
+                Mods();
                 Settings_Shown = true;
             }
             else if (Settings_Shown == true) {
@@ -171,9 +173,19 @@ void CheckKey() {
             case 77: std::cout << "Right arrow Pressed\n"; break;
             }
         }
+        else if (key == 'm' || key == 'M') { // Check for M key
+            if (Inventory_Shown == false) {
+                ClearWindows();
+                Inventory();
+                Inventory_Shown = true;
+            }
+            else if (Inventory_Shown == true) {
+                ClearWindows();
+                Inventory_Shown = false;
+            }
+        }
     }
 }
-
 
 int main() {
     PlayTitle();
