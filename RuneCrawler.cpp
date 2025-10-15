@@ -159,10 +159,12 @@ void CheckKey() {
                 Settings();
                 Mods();
                 Settings_Shown = true;
+                Inventory_Shown = false;
             }
             else if (Settings_Shown == true) {
                 ClearWindows();
                 Settings_Shown = false;
+                Inventory_Shown = false;
             }
         }
         else if (key == 224) { // Check for special key indicator
@@ -178,10 +180,12 @@ void CheckKey() {
                 ClearWindows();
                 Inventory();
                 Inventory_Shown = true;
+                Settings_Shown = false;
             }
             else if (Inventory_Shown == true) {
                 ClearWindows();
                 Inventory_Shown = false;
+                Settings_Shown = false;
             }
         }
     }
