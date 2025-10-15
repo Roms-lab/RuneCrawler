@@ -28,6 +28,14 @@ To mod the game, simply open and edit ModAPI.ixx, add custom swords, bows, stats
 
 Edit the code and send a push request, or Email me at zachary.sherwood2009@gmail.com to help develop the game.
 
+## Controls
+
+**Arrow keys for movement**
+
+**Escape to open Settings/Mods**
+
+**M to open Inventory**
+
 ## Supported OS
 
 Windows ✅
